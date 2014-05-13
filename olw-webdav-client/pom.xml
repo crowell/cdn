@@ -1,0 +1,57 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>io.milton</groupId>
+		<artifactId>milton</artifactId>
+		<version>2.4.2.3-SNAPSHOT</version>
+	</parent>
+	<groupId>olw</groupId>
+	<artifactId>olw-webdav-client</artifactId>
+	<version>1.0</version>
+	<packaging>jar</packaging>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<milton.version>2.4.2.8</milton.version>
+	</properties>
+	
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.0.2</version>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<configuration>
+					<mainClass>de.tu_darmstadt.elc.olw.api.webdav.WebDAVClient</mainClass>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	
+	<dependencies>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.6.1</version>
+		</dependency>
+		<dependency>
+			<groupId>io.milton</groupId>
+			<artifactId>milton-api</artifactId>
+			<version>${milton.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>io.milton</groupId>
+			<artifactId>milton-client</artifactId>
+			<version>${milton.version}</version>
+		</dependency>
+		
+	</dependencies>
+</project>
